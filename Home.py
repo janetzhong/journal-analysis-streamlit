@@ -26,5 +26,8 @@ This demo offers tools designed to provide you with deeper insights into your pe
 
 - 📈 **Multiple Journal Entry Analysis**: (coding in progress)
 
+- 🎨 **Journal Cover Art Generator**: (coding in progress)
+
+
 👈  To get started, simply select a demo from the sidebar.
 """)
