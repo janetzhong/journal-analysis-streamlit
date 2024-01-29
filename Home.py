@@ -10,7 +10,7 @@ st.write("# 📝 Journal Analysis Demos")
 st.sidebar.success("Select a demo above.")
 
 # Link to view the source code
-source_code_url = "https://github.com/janetzhong/brain-real-estate-website"
+source_code_url = "https://github.com/janetzhong/journal-analysis-streamlit"
 st.markdown(f"[View Source Code]({source_code_url})", unsafe_allow_html=True)
 
 
