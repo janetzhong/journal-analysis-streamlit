@@ -22,7 +22,7 @@ This demo offers tools designed to provide you with deeper insights into your pe
 
 - 📡 **Journal Emotion Radar with Huggingface**: Gives you an emotional radar plot from an input journal entry of six emotions from huggingface model `michellejieli/emotion_text_classifier'.
 
-- 🍰 **Brain Real Estate with Anthropic**: Categorizes an input journal entry into five main themes and plots % brain real estate for each theme in a pie chart.
+- 🍰 **Brain Real Estate with Anthropic**: Categorizes an input journal entry into five main themes using Claude model from Anthropic and plots % brain real estate for each theme in a pie chart.
 
 - 📈 **Multiple Journal Entry Analysis**: (coding in progress)
 
