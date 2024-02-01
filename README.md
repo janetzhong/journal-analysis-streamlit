@@ -14,7 +14,7 @@ Installation
 1.  **Clone the Repository**  
     Start by cloning the app repository to your local machine:
     
-        git clone https://github.com/your-username/your-streamlit-app-repo.git
+        git clone https://github.com/janetzhong/journal-analysis-streamlit
         cd your-streamlit-app-repo
     
 2.  **Create a Virtual Environment (Optional but Recommended)**  

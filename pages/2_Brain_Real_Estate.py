@@ -12,6 +12,21 @@ except KeyError:
 
 st.title("📝 Brain Real Estate with Anthropic")
 
+with st.expander("Example journal entry"):
+    st.write("""
+Wow, what a day! Been deep in the MindStorm grind, you know, the app that's all about making journaling cool again and showing you where your head's at. It's been my baby, my obsession, honestly. Coding it up, watching it come alive—it's like pure magic.
+
+But man, hitting the off switch tonight felt different. I just felt so tired, and down, and I couldn't figure out why. Randomly, I took a sec to check my own stats on MindStorm and, yikes, it was a wake-up call. Turns out, I've been all work, no play, and way too many solo coding marathons. My thoughts have been mostly about work, but they used to be also about my friends and books I had been reading.
+
+So, I did something I hadn't done in forever. Shut the laptop, hit up an old buddy, and we headed out for a walk in the park. And not just any walk—it was epic. The air, the laughs, the kinda deep talks you can only have with someone who gets you. It felt like coming up for air after being underwater for too long.
+
+This whole app journey's taught me tons about tech and about myself. But today? It showed me that even something as engaging as coding can become overwhelming without the right balance. I was reminded that my well-being hinges on maintaining a healthy mix of work, social connections, and personal hobbies. Letting any one aspect dominate can throw off my whole equilibrium. But that's just me, and everyone's different in their ideal brain real estate. Sometimes, we don't even realize what our ideal balance looks like until we're off kilter.
+
+Gotta keep this in mind: Balancing between pixels and the real world is key. Oh, and walks in the park? Highly recommend. 10/10, would do again.
+    """)
+    
+    
+    
 # Text area for journal input
 journal_text = st.text_area("Input your journal, recommended ~200+ words", placeholder="Type your journal here...", height=300)
 
@@ -85,7 +100,5 @@ if submit_button and journal_text and anthropic_api_key:
         make_brain_real_estate_plot(response.completion)
         # Display the detailed text response from the API
         st.write(response.completion)
-        st.text("For debugging:")
-        st.text(response.completion)
     except Exception as e:
         st.error(f"An error occurred: {str(e)}")
