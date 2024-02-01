@@ -1,6 +1,5 @@
 import streamlit as st
 from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
-from dotenv import load_dotenv
 import os
 
 # ------------------------ Environment and API Setup ------------------------ #
