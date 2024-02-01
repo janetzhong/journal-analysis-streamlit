@@ -11,10 +11,9 @@ except KeyError:
         st.markdown("[View the source code](https://github.com/janetzhong/brain-real-estate-website)")
 
 st.title("📝 Brain Real Estate with Anthropic")
-
-with st.expander("Example journal entry"):
-    st.write("""
-Wow, what a day! Been deep in the MindStorm grind, you know, the app that's all about making journaling cool again and showing you where your head's at. It's been my baby, my obsession, honestly. Coding it up, watching it come alive—it's like pure magic.
+    
+# Text area for journal input
+journal_text = st.text_area("Input your journal, recommended ~200+ words", value="""Wow, what a day! Been deep in the MindStorm grind, you know, the app that's all about making journaling cool again and showing you where your head's at. It's been my baby, my obsession, honestly. Coding it up, watching it come alive—it's like pure magic.
 
 But man, hitting the off switch tonight felt different. I just felt so tired, and down, and I couldn't figure out why. Randomly, I took a sec to check my own stats on MindStorm and, yikes, it was a wake-up call. Turns out, I've been all work, no play, and way too many solo coding marathons. My thoughts have been mostly about work, but they used to be also about my friends and books I had been reading.
 
@@ -23,12 +22,7 @@ So, I did something I hadn't done in forever. Shut the laptop, hit up an old bud
 This whole app journey's taught me tons about tech and about myself. But today? It showed me that even something as engaging as coding can become overwhelming without the right balance. I was reminded that my well-being hinges on maintaining a healthy mix of work, social connections, and personal hobbies. Letting any one aspect dominate can throw off my whole equilibrium. But that's just me, and everyone's different in their ideal brain real estate. Sometimes, we don't even realize what our ideal balance looks like until we're off kilter.
 
 Gotta keep this in mind: Balancing between pixels and the real world is key. Oh, and walks in the park? Highly recommend. 10/10, would do again.
-    """)
-    
-    
-    
-# Text area for journal input
-journal_text = st.text_area("Input your journal, recommended ~200+ words", placeholder="Type your journal here...", height=300)
+    """, height=300)
 
 
 # Brain real estate
@@ -79,7 +73,7 @@ def make_brain_real_estate_plot(analysis_text):
 # Brain Real Estate App code
 if submit_button and journal_text and anthropic_api_key:
     # Updated prompt with specific instructions for output format and to exclude closing remarks
-    question = "if you had to make a pie chart of my brain real estate over the week, what are the five themes you would classify it as? Include as numbered list with theme title, percentages and description, without other remarks"
+    question = "if you had to make a pie chart of my brain real estate over the week, what are the five themes you would classify it as? Format it as {item number} {theme} {(percentage)} - {Description}, without other remarks"
     prompt = f"{anthropic.HUMAN_PROMPT} Here's a journal entry:\n\n{journal_text}\n\n{question}\n\n{anthropic.AI_PROMPT}"
 
     # Initialize the Anthropics client with the provided API key
