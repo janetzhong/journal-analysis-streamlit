@@ -43,6 +43,15 @@ def main():
     """Run the main Streamlit app."""
     st.title('Journal Emotion Radar')
 
+    with st.expander("Example journal entry"):
+        st.write("""
+    
+Today has been a whirlwind of emotions. This morning, I woke up to a stunning sunrise that filled my heart with sheer delight. The vibrant colors painted across the sky were a reminder of the beauty that surrounds us every day, and it set a positive tone for the hours ahead. I was very happy!
+
+However, as the day unfolded, a heavy cloud of sadness descended. It's the anniversary of a significant loss in my life, a day that always brings a profound sense of longing and grief. Memories of happier times mingled with the weight of absence, leaving me with a profound sense of melancholy. I was very sad.
+
+Life has this unique way of weaving joy and sorrow into the tapestry of our days, and today was a poignant reminder of this delicate balance. Amidst the highs and lows, I'm learning to appreciate the full spectrum of emotions that define our human experience.
+        """)
     # Main area for user text input
     user_input = st.text_area("Enter your journal entry or text here:", height=150)
 
