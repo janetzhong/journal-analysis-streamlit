@@ -24,6 +24,8 @@ This demo offers tools designed to provide you with deeper insights into your pe
 
 - 🍰 **Brain Real Estate with Anthropic**: Categorizes an input journal entry into five main themes using Claude model from Anthropic and plots % brain real estate for each theme in a pie chart.
 
+- 🧠 **Claude Journal Analysis**: Get a response in best friend mode in different tones or CBT-guided mode using Claude.
+
 - 📈 **Multiple Journal Entry Analysis**: (coding in progress)
 
 - 🎨 **Journal Cover Art Generator**: (coding in progress)

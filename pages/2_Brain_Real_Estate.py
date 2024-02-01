@@ -13,16 +13,11 @@ except KeyError:
 st.title("📝 Brain Real Estate with Anthropic")
     
 # Text area for journal input
-journal_text = st.text_area("Input your journal, recommended ~200+ words", value="""Wow, what a day! Been deep in the MindStorm grind, you know, the app that's all about making journaling cool again and showing you where your head's at. It's been my baby, my obsession, honestly. Coding it up, watching it come alive—it's like pure magic.
+journal_text = st.text_area("Input your journal, recommended ~200+ words", value= """Today has been a whirlwind of emotions. This morning, I woke up to a stunning sunrise that filled my heart with sheer delight. The vibrant colors painted across the sky were a reminder of the beauty that surrounds us every day, and it set a positive tone for the hours ahead. I was very happy!
 
-But man, hitting the off switch tonight felt different. I just felt so tired, and down, and I couldn't figure out why. Randomly, I took a sec to check my own stats on MindStorm and, yikes, it was a wake-up call. Turns out, I've been all work, no play, and way too many solo coding marathons. My thoughts have been mostly about work, but they used to be also about my friends and books I had been reading.
+However, as the day unfolded, a heavy cloud of sadness descended. It's the anniversary of a significant loss in my life, a day that always brings a profound sense of longing and grief. Memories of happier times mingled with the weight of absence, leaving me with a profound sense of melancholy. I was very sad.
 
-So, I did something I hadn't done in forever. Shut the laptop, hit up an old buddy, and we headed out for a walk in the park. And not just any walk—it was epic. The air, the laughs, the kinda deep talks you can only have with someone who gets you. It felt like coming up for air after being underwater for too long.
-
-This whole app journey's taught me tons about tech and about myself. But today? It showed me that even something as engaging as coding can become overwhelming without the right balance. I was reminded that my well-being hinges on maintaining a healthy mix of work, social connections, and personal hobbies. Letting any one aspect dominate can throw off my whole equilibrium. But that's just me, and everyone's different in their ideal brain real estate. Sometimes, we don't even realize what our ideal balance looks like until we're off kilter.
-
-Gotta keep this in mind: Balancing between pixels and the real world is key. Oh, and walks in the park? Highly recommend. 10/10, would do again.
-    """, height=300)
+Life has this unique way of weaving joy and sorrow into the tapestry of our days, and today was a poignant reminder of this delicate balance. Amidst the highs and lows, I'm learning to appreciate the full spectrum of emotions that define our human experience.""", height=300)
 
 
 # Brain real estate
