@@ -1,6 +1,5 @@
 import streamlit as st
 from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
-import os
 
 # ------------------------ Environment and API Setup ------------------------ #
 
@@ -21,7 +20,7 @@ except KeyError:
     with st.sidebar:
         anthropic_api_key = st.text_input("Anthropic API Key", key="journal_api_key", type="password")
         st.markdown("[View the source code](https://github.com/janetzhong/brain-real-estate-website)")
-
+anthropic = Anthropic(api_key=anthropic_api_key)
 # ------------------------ Function Definitions ------------------------ #
 
 def get_ai_response(user_input, response_mode, tone=None, name = ""):
