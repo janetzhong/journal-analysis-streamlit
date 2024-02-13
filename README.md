@@ -69,7 +69,7 @@ With the installation and configuration done, you're ready to run the app.
 1.  **Launch Streamlit**  
     Run the following command in your terminal:
     
-        streamlit run Home.py
+        python -m streamlit run Home.py
     
 2.  **Access the App**  
     Streamlit will start the app and open it in your default web browser. If it doesn't, you can manually navigate to the URL provided in the terminal output (usually `http://localhost:8501`).
