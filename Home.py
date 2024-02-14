@@ -5,7 +5,7 @@ st.set_page_config(
     page_icon="👋",
 )
 
-st.write("# 📝 Journal Analysis Demos")
+st.write("# 📝 Mindstorm Demos")
 
 st.sidebar.success("Select a demo above.")
 

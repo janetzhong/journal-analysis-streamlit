@@ -2,9 +2,20 @@ from openai import OpenAI
 import streamlit as st
 
 st.title("ChatGPT-like clone")
-
+st.write("Tutorial: https://docs.streamlit.io/knowledge-base/tutorials/build-conversational-apps. This is a basic chat app, it appends each user and ai input to a chat history.")
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
+st.write("""
+         ### Print Chat History 
+         
+         I couldn't put this button at the bottom of the page so it is here. Click this button at the end of the chat to see the chat history and how it would be saved in our database.""")
+if st.button('Print Chat History'):
+    for msg in st.session_state.messages:
+        st.write(f"{msg['role'].capitalize()}: {msg['content']}")
+        
+st.write("""
+         ### Chat interface
+         # """)       
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
 
@@ -31,3 +42,4 @@ if prompt := st.chat_input("What is up?"):
         )
         response = st.write_stream(stream)
     st.session_state.messages.append({"role": "assistant", "content": response})
+    
