@@ -3,8 +3,15 @@ import streamlit as st
 
 st.title("ChatGPT-like clone")
 st.write("Tutorial: https://docs.streamlit.io/knowledge-base/tutorials/build-conversational-apps. This is a basic chat app, it appends each user and ai input to a chat history.")
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
+try:
+    openai_api_key = st.secrets["OPENAI_API_KEY"]
+except KeyError:
+    with st.sidebar:
+        openai_api_key = st.text_input("OpenAI API Key", key="journal_api_key", type="password")
+client = OpenAI(api_key=openai_api_key)
+
+        
 st.write("""
          ### Print Chat History 
          

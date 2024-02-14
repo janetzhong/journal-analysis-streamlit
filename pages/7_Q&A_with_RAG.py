@@ -9,11 +9,28 @@ from langchain_community.callbacks import get_openai_callback
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 def main():
-    openai_api_key = st.secrets["OPENAI_API_KEY"]
+    try:
+        openai_api_key = st.secrets["OPENAI_API_KEY"]
+    except KeyError:
+        with st.sidebar:
+            openai_api_key = st.text_input("OpenAI API Key", key="journal_api_key", type="password")
+    
+    client = OpenAI(api_key=openai_api_key)
+
     
     st.title("Q&A with RAG")
     st.write("Tutorials used: https://github.com/alejandro-ao/langchain-ask-pdf/blob/main/app.py \n https://docs.mistral.ai/guides/basic-RAG/")
-        
+    
+    st.write("Here are some demo journal entries that you can try if you don't have your own:")
+    # Button to download example demo journal entries 
+    file_path = 'pages/generatedjournal.txt'
+    with open(file_path, "rb") as file:
+        btn = st.download_button(
+                label="Download demo journal entries",
+                data=file,
+                file_name="generatedjournal.txt",
+                help="Click to download demo journal entries txt file"
+            )
     # upload file
     file = st.file_uploader("Upload your PDF or TXT file of journal entries. This could be an export from other journalling apps, like Day One. If multiple entries, make sure journal entries have the date for better results.", type=["pdf", "txt"])
     
@@ -39,7 +56,7 @@ def main():
       knowledge_base = FAISS.from_texts(chunks, embeddings)
       
       # show user input
-      user_question = st.text_input("Here you can ask any other question about the PDF or TXT file:")
+      user_question = st.text_input("""Here you can ask any question about the PDF or TXT file. \n For example: "what made me happy or sad according to my journal entries?" """)
       if user_question:
         docs = knowledge_base.similarity_search(user_question)
         

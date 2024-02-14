@@ -19,7 +19,6 @@ try:
 except KeyError:
     with st.sidebar:
         anthropic_api_key = st.text_input("Anthropic API Key", key="journal_api_key", type="password")
-        st.markdown("[View the source code](https://github.com/janetzhong/brain-real-estate-website)")
 anthropic = Anthropic(api_key=anthropic_api_key)
 # ------------------------ Function Definitions ------------------------ #
 
